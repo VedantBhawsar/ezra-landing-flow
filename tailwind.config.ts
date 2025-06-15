@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'ezra-purple': '#6F42C1',
+				'ezra-yellow': '#FFC107',
+				'ezra-gray': '#F8F9FA',
+				'ezra-text': '#1F1F1F',
+				'ezra-muted': '#6C757D'
+			},
+			backgroundImage: {
+				'gradient-purple': 'linear-gradient(135deg, #6F42C1 0%, #8B5CF6 100%)',
+				'gradient-purple-light': 'linear-gradient(135deg, #F3F4FF 0%, #E5E7EB 100%)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +94,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out'
 			}
 		}
 	},
