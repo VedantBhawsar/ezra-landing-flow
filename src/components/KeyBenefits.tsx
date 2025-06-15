@@ -14,14 +14,14 @@ const KeyBenefits = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-ezra-text mb-8">
+            <h2 className="text-4xl font-bold text-ezra-text dark:text-white mb-8">
               Experience the key benefits
             </h2>
-            <p className="text-xl text-ezra-muted mb-12">
+            <p className="text-xl text-ezra-muted dark:text-gray-300 mb-12">
               Split platform into its own dashboard can be found through finding flexible integration, through business-to-business solutions.
             </p>
             
@@ -32,10 +32,10 @@ const KeyBenefits = () => {
                     {benefit.number}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-ezra-text mb-2">
+                    <h3 className="text-xl font-semibold text-ezra-text dark:text-white mb-2">
                       {benefit.title}
                     </h3>
-                    <p className="text-ezra-muted leading-relaxed">
+                    <p className="text-ezra-muted dark:text-gray-300 leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>

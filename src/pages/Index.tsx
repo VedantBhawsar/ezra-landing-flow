@@ -8,20 +8,23 @@ import KeyBenefits from "@/components/KeyBenefits";
 import Testimonials from "@/components/Testimonials";
 import DemoForm from "@/components/DemoForm";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <Features />
-      <Stats />
-      <ProductValue />
-      <KeyBenefits />
-      <Testimonials />
-      <DemoForm />
-      <Footer />
-    </div>
+    <ThemeProvider defaultTheme="light" storageKey="ezra-theme">
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+        <Navigation />
+        <Hero />
+        <Features />
+        <Stats />
+        <ProductValue />
+        <KeyBenefits />
+        <Testimonials />
+        <DemoForm />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 

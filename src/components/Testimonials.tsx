@@ -27,30 +27,30 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-ezra-gray">
+    <section className="py-20 px-6 bg-ezra-gray dark:bg-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-ezra-text mb-4">
+          <h2 className="text-4xl font-bold text-ezra-text dark:text-white mb-4">
             Customer testimonials
           </h2>
-          <p className="text-xl text-ezra-muted">
+          <p className="text-xl text-ezra-muted dark:text-gray-300">
             We work with only the best for absolute results, and why you can rely on us to lead at our values.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-lg">
+            <div key={index} className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg dark:shadow-gray-700/50 border border-transparent dark:border-gray-700">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star 
                     key={i} 
-                    className={`w-5 h-5 ${i < Math.floor(testimonial.rating) ? 'text-ezra-yellow fill-current' : 'text-gray-300'}`} 
+                    className={`w-5 h-5 ${i < Math.floor(testimonial.rating) ? 'text-ezra-yellow fill-current' : 'text-gray-300 dark:text-gray-600'}`} 
                   />
                 ))}
-                <span className="ml-2 text-sm text-ezra-muted">{testimonial.rating}</span>
+                <span className="ml-2 text-sm text-ezra-muted dark:text-gray-400">{testimonial.rating}</span>
               </div>
-              <p className="text-ezra-text mb-6 leading-relaxed">
+              <p className="text-ezra-text dark:text-gray-200 mb-6 leading-relaxed">
                 "{testimonial.text}"
               </p>
               <div className="flex items-center">
@@ -60,8 +60,8 @@ const Testimonials = () => {
                   className="w-12 h-12 rounded-full mr-4"
                 />
                 <div>
-                  <div className="font-semibold text-ezra-text">{testimonial.name}</div>
-                  <div className="text-sm text-ezra-muted">{testimonial.role}</div>
+                  <div className="font-semibold text-ezra-text dark:text-white">{testimonial.name}</div>
+                  <div className="text-sm text-ezra-muted dark:text-gray-400">{testimonial.role}</div>
                 </div>
               </div>
             </div>

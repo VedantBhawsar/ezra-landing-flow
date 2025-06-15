@@ -8,13 +8,13 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-ezra-gray">
+    <section className="py-20 px-6 bg-ezra-gray dark:bg-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-ezra-text mb-4">
+          <h2 className="text-4xl font-bold text-ezra-text dark:text-white mb-4">
             World acclaimed leaders the field
           </h2>
-          <p className="text-xl text-ezra-muted">
+          <p className="text-xl text-ezra-muted dark:text-gray-300">
             Super talented and collaborative team and enterprise how resources.
           </p>
         </div>
@@ -25,7 +25,7 @@ const Stats = () => {
               <div className="text-5xl font-bold text-ezra-purple mb-2">
                 {stat.number}
               </div>
-              <div className="text-ezra-muted font-medium">
+              <div className="text-ezra-muted dark:text-gray-300 font-medium">
                 {stat.label}
               </div>
             </div>

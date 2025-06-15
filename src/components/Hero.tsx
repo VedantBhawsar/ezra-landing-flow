@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="pt-24 pb-20 px-6 bg-gradient-to-br from-white to-ezra-gray">
+    <section className="pt-24 pb-20 px-6 bg-gradient-to-br from-white to-ezra-gray dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <h1 className="text-5xl lg:text-6xl font-bold text-ezra-text mb-6 leading-tight">
+            <h1 className="text-5xl lg:text-6xl font-bold text-ezra-text dark:text-white mb-6 leading-tight">
               Ready to level-up your online business?
             </h1>
-            <p className="text-xl text-ezra-muted mb-8 leading-relaxed">
+            <p className="text-xl text-ezra-muted dark:text-gray-300 mb-8 leading-relaxed">
               Transform your digital presence with our intelligent SaaS platform. Scale faster, work smarter, and achieve sustainable growth with tools designed for modern entrepreneurs.
             </p>
             <Button className="bg-ezra-purple hover:bg-ezra-purple/90 text-white px-8 py-4 text-lg">
