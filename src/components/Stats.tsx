@@ -27,6 +27,7 @@ const Stats = () => {
           </p>
         </div>
         
+        {/* Main stats grid */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div 
@@ -57,42 +58,44 @@ const Stats = () => {
           ))}
         </div>
 
-        {/* Revenue Growth Card - Properly positioned */}
+        {/* Revenue Growth Card - Better positioned */}
         <div className="flex justify-center">
-          <div className="relative group max-w-md w-full">
-            <div className="bg-gradient-to-r from-ezra-purple to-purple-600 dark:from-purple-700 dark:to-purple-800 rounded-2xl p-8 shadow-2xl transform group-hover:scale-105 transition-all duration-300 border border-purple-200 dark:border-purple-600">
-              {/* Animated background pattern */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="relative group">
+            {/* Card background with enhanced styling */}
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-8 rounded-3xl shadow-xl border border-green-100 dark:border-green-800/50 backdrop-blur-sm max-w-md mx-auto hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              
+              {/* Floating icon */}
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+              </div>
               
               {/* Content */}
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-white/80 text-sm font-medium">Revenue Growth</div>
-                  <TrendingUp className="w-5 h-5 text-white/80" />
+              <div className="text-center pt-8">
+                <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2 group-hover:scale-105 transition-transform duration-300">
+                  +245%
+                </div>
+                <div className="text-lg font-semibold text-green-700 dark:text-green-300 mb-2">
+                  Revenue Growth
+                </div>
+                <div className="text-sm text-green-600/80 dark:text-green-400/80">
+                  Average client increase in first year
                 </div>
                 
-                <div className="flex items-end gap-3 mb-4">
-                  <div className="text-4xl font-bold text-white">245%</div>
-                  <div className="text-white/80 text-sm mb-1">since now</div>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <div className="bg-ezra-yellow/20 backdrop-blur-sm rounded-lg px-3 py-1.5 border border-yellow-300/30">
-                    <span className="text-white text-sm font-medium">View Progress</span>
-                  </div>
-                  <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                  </div>
+                {/* Progress bar */}
+                <div className="mt-6 bg-green-100 dark:bg-green-800/30 rounded-full h-2 overflow-hidden">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-full rounded-full transition-all duration-1000 group-hover:w-full" style={{ width: '85%' }}></div>
                 </div>
               </div>
               
               {/* Decorative elements */}
-              <div className="absolute top-4 right-4 w-12 h-12 bg-white/5 rounded-full blur-xl"></div>
-              <div className="absolute bottom-4 left-4 w-8 h-8 bg-ezra-yellow/20 rounded-full blur-lg"></div>
+              <div className="absolute top-4 right-4 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></div>
+              
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-400/20 to-emerald-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10"></div>
             </div>
-            
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-ezra-purple/20 to-purple-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300 -z-10"></div>
           </div>
         </div>
       </div>
