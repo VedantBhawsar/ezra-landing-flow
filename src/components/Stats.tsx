@@ -27,7 +27,7 @@ const Stats = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div 
               key={index} 
@@ -55,6 +55,45 @@ const Stats = () => {
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-ezra-purple to-ezra-yellow group-hover:w-full transition-all duration-500"></div>
             </div>
           ))}
+        </div>
+
+        {/* Revenue Growth Card - Properly positioned */}
+        <div className="flex justify-center">
+          <div className="relative group max-w-md w-full">
+            <div className="bg-gradient-to-r from-ezra-purple to-purple-600 dark:from-purple-700 dark:to-purple-800 rounded-2xl p-8 shadow-2xl transform group-hover:scale-105 transition-all duration-300 border border-purple-200 dark:border-purple-600">
+              {/* Animated background pattern */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Content */}
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-white/80 text-sm font-medium">Revenue Growth</div>
+                  <TrendingUp className="w-5 h-5 text-white/80" />
+                </div>
+                
+                <div className="flex items-end gap-3 mb-4">
+                  <div className="text-4xl font-bold text-white">245%</div>
+                  <div className="text-white/80 text-sm mb-1">since now</div>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <div className="bg-ezra-yellow/20 backdrop-blur-sm rounded-lg px-3 py-1.5 border border-yellow-300/30">
+                    <span className="text-white text-sm font-medium">View Progress</span>
+                  </div>
+                  <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute top-4 right-4 w-12 h-12 bg-white/5 rounded-full blur-xl"></div>
+              <div className="absolute bottom-4 left-4 w-8 h-8 bg-ezra-yellow/20 rounded-full blur-lg"></div>
+            </div>
+            
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-ezra-purple/20 to-purple-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-300 -z-10"></div>
+          </div>
         </div>
       </div>
     </section>
