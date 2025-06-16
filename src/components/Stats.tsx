@@ -27,7 +27,8 @@ const Stats = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-4 gap-8">
+        {/* Main stats grid */}
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div 
               key={index} 
@@ -55,6 +56,47 @@ const Stats = () => {
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-ezra-purple to-ezra-yellow group-hover:w-full transition-all duration-500"></div>
             </div>
           ))}
+        </div>
+
+        {/* Revenue Growth Card - Better positioned */}
+        <div className="flex justify-center">
+          <div className="relative group">
+            {/* Card background with enhanced styling */}
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-8 rounded-3xl shadow-xl border border-green-100 dark:border-green-800/50 backdrop-blur-sm max-w-md mx-auto hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              
+              {/* Floating icon */}
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+              </div>
+              
+              {/* Content */}
+              <div className="text-center pt-8">
+                <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2 group-hover:scale-105 transition-transform duration-300">
+                  +245%
+                </div>
+                <div className="text-lg font-semibold text-green-700 dark:text-green-300 mb-2">
+                  Revenue Growth
+                </div>
+                <div className="text-sm text-green-600/80 dark:text-green-400/80">
+                  Average client increase in first year
+                </div>
+                
+                {/* Progress bar */}
+                <div className="mt-6 bg-green-100 dark:bg-green-800/30 rounded-full h-2 overflow-hidden">
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-full rounded-full transition-all duration-1000 group-hover:w-full" style={{ width: '85%' }}></div>
+                </div>
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></div>
+              
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-400/20 to-emerald-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
